@@ -63,6 +63,7 @@ class User extends Authenticatable
         $data->user_name = $request->user_name;
         $data->email = $request->email;
         $data->password = Hash::make($request->password);
+        // Set Bydefault Values
         $data->is_verified = '1';
         $data->status = 'Enable';
         $data->role_id = '2';
