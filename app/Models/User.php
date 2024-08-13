@@ -77,8 +77,8 @@ class User extends Authenticatable
             $profilepicname = 'Profile-'.$request->first_name.'-'.time().'.'.$request->profile->getClientOriginalExtension();
             $profilelogo->move(Helper::profileFileUploadPath(), $profilepicname);
         }
-        // $data->profile = $profilepicname;
-        $data->profile = "Image";
+        $data->profile = $profilepicname;
+        // $data->profile = "Image";
         $data->gender = $request->gender;
         $data->save();
 
